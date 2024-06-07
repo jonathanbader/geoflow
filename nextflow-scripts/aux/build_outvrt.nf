@@ -2,6 +2,7 @@ nextflow.enable.dsl = 2
 
 process build_class_vrt {
 	label 'small_memory'
+	container 'floriankaterndahl/geoflow:v0.9.2'
 
 	publishDir "${params.final_outDir}", mode: 'copy', pattern: "*.vrt", overwrite: true
 

@@ -24,6 +24,7 @@ String GRASS_Sensors(String platform_short) {
 
 process calculate_spectral_indices {
 	label 'small_memory'
+	container 'floriankaterndahl/geoflow:v0.9.2'
 
 	input:
 	tuple val(TID), val(date), val(identifier), val(sensor), val(sensor_abbr), path(reflectance), val(index_choice)

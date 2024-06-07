@@ -2,6 +2,7 @@ nextflow.enable.dsl = 2
 
 process create_classification_dataset {
 	label 'small_memory'
+	container 'floriankaterndahl/geoflow:v0.9.2'
 
     input:
     tuple val(TID), path(bands), path(slVRTs), path(full_stack), path(cat_vec)

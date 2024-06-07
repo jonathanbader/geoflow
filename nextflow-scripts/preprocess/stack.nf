@@ -2,6 +2,7 @@ nextflow.enable.dsl = 2
 
 process build_vrt_stack {
 	label 'small_memory'
+	container 'floriankaterndahl/geoflow:v0.9.2'
 //    publishDir "${params.output_dir_indices}/${TID}", mode: 'copy', pattern: '*_STACK.vrt', overwrite: true
 
     input:

@@ -2,6 +2,7 @@ nextflow.enable.dsl = 2
 
 process scale_files {
 	label 'small_memory'
+	container 'floriankaterndahl/geoflow:v0.9.2'
 
 	input:
 	tuple val(TID), val(date), val(identifier), val(sensor), val(sensor_abbr), path(reflectance), path(qai), path(masked_reflectance), path(mask_raster)

@@ -2,6 +2,7 @@ nextflow.enable.dsl = 2
 
 process spat_lucas {
 	label 'small_memory'
+	container 'floriankaterndahl/geoflow:v0.9.2'
 
 	publishDir "${params.lucas_subset_dir}", pattern: "queried_lucas.gpkg", mode: 'copy', overwrite: true, enabled: params.publish_lucas_subset
 

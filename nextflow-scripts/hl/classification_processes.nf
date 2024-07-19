@@ -25,6 +25,7 @@ process create_classification_dataset {
 
 process merge_and_fit {
     label 'small_memory'
+    container 'floriankaterndahl/geoflow:v0.9.2'
 
     input:
     path(training_datasets)
@@ -50,6 +51,7 @@ process merge_and_fit {
 
 process predict_classifier {
 	label 'medium_memory'
+	container 'floriankaterndahl/geoflow:v0.9.2'
 
 	publishDir "${params.final_outDir}", mode: 'copy', pattern: "${TID}_prediction.tif", overwrite: true
 
